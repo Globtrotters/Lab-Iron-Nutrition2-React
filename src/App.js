@@ -13,7 +13,7 @@ function App() {
   const [foodsCopy, setFoodsData] = useState(foodsData)
   const [showForm, setShowForm] = useState(false)
 
-  //function to add a food
+  //function to add a food 
   const addNewFood = (newFood)=>{
     const updatedFoodData = [...foods, newFood]
     const updatedFoodCopy = [...foods, newFood]
@@ -21,7 +21,7 @@ function App() {
     setFoodsData(updatedFoodCopy)
   }
 
-  //function to filter 
+  //function to search for food
   const searchFoodFilter = (e) =>{
     console.log(e)
     setSearchInput(e.target.value)
@@ -41,7 +41,7 @@ function App() {
 
   }
 
-  //function that deletes
+  //function that deletes a food
 
   const deleteFood = (name) =>{
     const foodToDelete = foods.filter((food)=>{
@@ -50,7 +50,7 @@ function App() {
     setFood(foodToDelete)
   }
 
-  //function toggle the form
+  //function toggles the form
 
   const toggleForm = () =>{
     setShowForm(!showForm)
